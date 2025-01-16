@@ -1,0 +1,269 @@
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
+:root { 
+  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
+  --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
+  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+}
+
+
+
+
+/* Asegúrate de que el body y html ocupen todo el alto de la ventana */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* Establece el tamaño de las letras dentro de .typed */
+.typed {
+  font-size: 1.5rem; /* Cambia el valor a tu gusto (2rem es solo un ejemplo) */
+  font-weight: bold; /* Si deseas que las letras sean más gruesas */
+  font-family: cursive
+}
+
+
+
+/*--------------------------------------------------------------
+# Global Section Titles
+--------------------------------------------------------------*/
+.section-title {
+  text-align: center;
+  padding-bottom: 60px;
+  position: relative;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  position: relative;
+}
+
+.section-title h2:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 50px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.section-title p {
+  margin-bottom: 0;
+}
+
+
+
+/* El contenido principal debe ocupar el espacio restante */
+main {
+  flex: 1;
+}
+
+/* El footer se queda pegado al final */
+footer {
+  background-color: #343a40; /* Opcional: estilo adicional */
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+.gradient-background {
+  background: linear-gradient(300deg, #010d23, #03223f, #038bbb);
+  background-size: 180% 180%;
+  animation: gradient-animation 18s ease infinite;
+
+}
+
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+/* Variaciones específicas */
+.spotify-page.gradient-background {
+  background: linear-gradient(300deg, #1db954, #212121, #121212); /* Colores de Spotify */
+  background-size: 180% 180%;
+  animation: spotify-gradient-animation 18s ease infinite;
+}
+
+@keyframes spotify-gradient-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column; /* O row, dependiendo de la disposición deseada */
+
+}
+
+#hero {
+  flex: 1; /* Asegura que el héroe ocupe el espacio restante */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0; /* Opcional: Ajustar el espaciado interno */
+  color: white; /* Asegura que el texto sea legible */
+}
+
+/*--------------------------------------------------------------
+# About Section
+--------------------------------------------------------------*/
+.about .container {
+  background-color: var(--surface-color);
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+}
+
+.about .skills-content h5 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 0 15px 0;
+}
+
+.about .progress {
+  height: 36px;
+  display: block;
+  background: none;
+  border-radius: 0;
+  margin-top: 15px;
+}
+
+.about .progress .skill {
+  color: var(--default-color);
+  padding: 0;
+  margin: 0 0 6px 0;
+  text-transform: uppercase;
+  display: block;
+  font-weight: 600;
+  font-family: var(--heading-font);
+}
+
+.about .progress .skill .val {
+  float: right;
+  font-style: normal;
+}
+
+.about .progress-bar-wrap {
+  background: color-mix(in srgb, var(--default-color), transparent 90%);
+  height: 10px;
+}
+
+.about .progress-bar {
+  width: 1px;
+  height: 10px;
+  transition: 0.9s;
+  background-color: var(--accent-color);
+}
+
+.about .about-me h4 {
+  font-size: 28px;
+  position: relative;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.about .about-me h4:after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 64px;
+  height: 3px;
+  background: var(--accent-color);
+  left: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.about .about-me p {
+  font-size: 18px;
+}
+
+
+/*--------------------------------------------------------------
+# Resume Section
+--------------------------------------------------------------*/
+.resume .resume-title {
+  color: var(--heading-color);
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.resume .resume-item {
+  padding: 0 0 20px 20px;
+  margin-top: -2px;
+  border-left: 2px solid var(--accent-color);
+  position: relative;
+}
+
+.resume .resume-item h4 {
+  line-height: 18px;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  margin-bottom: 10px;
+}
+
+.resume .resume-item h5 {
+  font-size: 16px;
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.resume .resume-item ul {
+  padding-left: 20px;
+}
+
+.resume .resume-item ul li {
+  padding-bottom: 10px;
+}
+
+.resume .resume-item:last-child {
+  padding-bottom: 0;
+}
+
+.resume .resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: var(--background-color);
+  border: 2px solid var(--accent-color);
+}

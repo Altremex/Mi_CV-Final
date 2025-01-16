@@ -1,0 +1,157 @@
+{% extends 'layout.html' %}
+
+{% block title %}Mi CV{% endblock %}
+
+{% block content %}
+
+<section id="hero" class="gradient-background">
+    <div class="container d-flex flex-column align-items-center justify-content-center text-center" data-aos="fade-up"
+        data-aos-delay="100">
+        <h2>Alejandro Herrera Medellin</h2>
+        <p>
+            <br>
+            <span class="typed" data-typed-items="Ingeniero, Programador, Bioelectronico, Freelancer"></span>
+        </p>
+    </div>
+</section>
+
+<br>
+
+
+<!-- About Section -->
+<section id="about" class="about section">
+    <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row gy-4">
+            <div class="col-12 col-md-6">
+                <div class="row justify-content-between gy-4">
+                    <div class="col-lg-5">
+                        <img src="{{ url_for('static', filename='img/profile-img.png') }}" class="img-fluid"
+                            alt="Perfil de Alejandro Herrera Medellin" />
+                    </div>
+                    <div class="col-lg-7 about-info">
+                        <p><strong>Nombre: </strong><span>Alejandro Herrera Medellin</span></p>
+                        <p><strong>Perfil: </strong><span>Ingeniero Bioelectrónico</span></p>
+                        <p><strong>Email: </strong><span>hmedellin.alejandro@gmail.com</span></p>
+                        <p><strong>Teléfono: </strong><span>(+52) 449-386-7224</span></p>
+                    </div>
+                </div>
+
+                <div class="skills-content skills-animation">
+                    <h5>Habilidades</h5>
+                    <div id="skills-list">
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="about-me">
+                    <h4>Acerca de mí</h4>
+                    <p>
+                        Soy un ingeniero en Bioelectrónica, graduado de la Universidad Panamericana, apasionado por la
+                        tecnología y la programación,
+                        capaz de innovar en el diseño de dispositivos electrónicos que cambiarán y mejorarán el futuro
+                        de la humanidad mediante
+                        el desarrollo de alta tecnología.
+                    </p>
+                    <p>
+                        Con disposición por seguir aprendiendo y trabajando en equipo, busco oportunidades donde pueda
+                        aplicar mi experiencia
+                        para generar un impacto positivo en el mundo.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- /About Section -->
+<br><br>
+<!-- Resume Section -->
+<section id="resume" class="resume section">
+
+    <!-- Section Title -->
+    <div class="container section-title" data-aos="fade-up">
+        <h2>Experiencia Laboral</h2>
+    </div><!-- End Section Title -->
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="resume-title">Resumen</h3>
+
+                <div class="resume-item pb-8">
+                    <h4>Alejandro Herrera</h4>
+                    <p><em>Ingeniero Bioelectrónico especializado en programación, enfocado en desarrollar soluciones
+                            tecnológicas innovadoras, siempre orientadas a satisfacer las necesidades y expectativas del
+                            cliente.</em>
+                    </p>
+                    <ul>
+                        <li>(+52) 449-386-7224</li>
+                        <li>alex.hm.9924@gmail.com</li>
+                    </ul>
+                </div>
+
+                <h3 class="resume-title">Educación</h3>
+                <div class="resume-item">
+                    <h4>Ingeniero Bioelectrónico</h4>
+                    <h5>2019-2024</h5>
+                    <p><em>Universidad Panamericana</em></p>
+                    <p>Profesional capaz de innovar en el diseño de dispositivos electrónicos que permitirán cambiar y
+                        mejorar el futuro de la humanidad, mediante el desarrollo de alta tecnología</p>
+                </div>
+
+                <div class="resume-item">
+                    <h4>Ciberseguridad de Google</h4>
+                    <h5>2024</h5>
+                    <p><em>Google</em></p>
+                    <p>El Certificado de Carrera de Ciberseguridad de Google consta de ocho
+                        cursos, desarrollados por Google, que incluyen actividades prácticas y
+                        ejemplos que simulan tareas comunes y frecuentes de ciberseguridad.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <h3 class="resume-title">Experiencia Profesional</h3>
+                <div class="resume-item">
+                  <h4>Baby Mango</h4>
+                  <h5>2022- 2024</h5>
+                  <p><em>Mesero</em></p>
+                  <ul>
+                    <li>Atencion promedio a mas de 50 clientes</li>
+                    <li>Limpieza y distribucion de mesas, montaje y desmontaje</li>
+                    <li>Inventario de almacen</li>
+                    <li>Supervisión y capacitación de nuevos ayudantes</li>
+                  </ul>
+                </div><!-- Edn Resume Item -->
+
+                <div class="resume-item">
+                    <h4>Constructora CYAt</h4>
+                    <h5>2017 - 2019</h5>
+                    <p><em>Ayudante General (Medio tiempo)</em></p>
+                    <ul>
+                        <li>Supervision de protocolos para evitar
+                            accidentes.</li>
+                        <li>Trabajo bajo presion, resolucion de problemas</li>
+                        <li>Captura y entrega de reportes en Microsoft Excel</li>
+                    </ul>
+                </div>
+
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+
+
+</section><!-- /Resume Section -->
+
+{% endblock %}

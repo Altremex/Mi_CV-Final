@@ -1,0 +1,73 @@
+{% extends 'layout.html' %}
+
+{% block title %}Pagina de Contacto{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/contacts/contact-1/assets/css/contact-1.css">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/contact.css') }}">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+{% block content %}
+
+<section class="gradient-background py-3 py-md-5">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="mb-4 display-5 roboto-mono text-white">Contacto</h2>
+            <p class="text-secondary mb-5">Envíame un mensaje y me comunicaré contigo.</p>
+            <hr class="w-50 mx-auto mb-5 border-dark-subtle">
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-9">
+                <div class="bg-white border rounded shadow-sm p-4">
+                    <form method="POST" action="{{ url_for('contact') }}">
+                        {{ form.hidden_tag() }}
+                        <div class="row gy-4">
+                            <div class="col-12">
+                                <label for="fullname" class="form-label">Nombre <span class="text-danger">*</span></label>
+                                {{ form.name(class_="form-control", id="fullname") }}
+                                {% if form.name.errors %}
+                                    <small class="text-danger">{{ form.name.errors[0] }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12 col-md-6">
+                                <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
+                                {{ form.email(class_="form-control", id="email") }}
+                                {% if form.email.errors %}
+                                    <small class="text-danger">{{ form.email.errors[0] }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <label for="message" class="form-label">Mensaje <span class="text-danger">*</span></label>
+                                {{ form.message(class_="form-control", id="message", rows="3") }}
+                                {% if form.message.errors %}
+                                    <small class="text-danger">{{ form.message.errors[0] }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                {{ form.recaptcha }}
+                                {% if form.recaptcha.errors %}
+                                    <small class="text-danger">{{ form.recaptcha.errors[0] }}</small>
+                                {% endif %}
+                            </div>
+                            <div class="col-12">
+                                <div class="d-grid">
+                                    {{ form.submit(class_="btn btn-primary btn-lg") }}
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+{% endblock %}
