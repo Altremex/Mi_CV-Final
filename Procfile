@@ -1,1 +1,1 @@
-web: gunicorn main:app --timeout 420 --workers 2
+web: gunicorn main:app -t 60 --keep-alive 60
