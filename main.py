@@ -66,7 +66,7 @@ def spotify():
         # Buscar canciones en Spotify
         year = date.split("-")[0]
         for song in song_names:
-            result = sp.search(q=f"track:{song} year:{year}", type="track")
+            result = sp.search(q=f"track:{song} year:{year}", type="track", limit=1)
             try:
                 uri = result["tracks"]["items"][0]["uri"]
                 song_uris.append(uri)
