@@ -51,7 +51,7 @@ def spotify():
         # Scraping de Billboard Hot 100
         header = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:131.0) Gecko/20100101 Firefox/131.0"}
         billboard_url = f"https://www.billboard.com/charts/hot-100/{date}"
-        response = requests.get(url=billboard_url, headers=header)
+        response = requests.get(url=billboard_url, headers=header, timeout=30)
 
         soup = BeautifulSoup(response.text, 'html.parser')
         song_names_spans = soup.select("li ul li h3")
