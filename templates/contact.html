@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
-<script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 {% endblock %}
 
 {% block content %}
@@ -46,14 +45,6 @@
                                 {{ form.message(class_="form-control", id="message", rows="3") }}
                                 {% if form.message.errors %}
                                     <small class="text-danger">{{ form.message.errors[0] }}</small>
-                                {% endif %}
-                            </div>
-                            <div class="col-12">
-                                <div class="g-recaptcha" 
-                                     data-sitekey="{{ RECAPTCHA_PUBLIC_KEY }}"
-                                     data-action="SUBMIT_FORM"></div>
-                                {% if form.recaptcha.errors %}
-                                    <small class="text-danger">{{ form.recaptcha.errors[0] }}</small>
                                 {% endif %}
                             </div>
                             <div class="col-12">
